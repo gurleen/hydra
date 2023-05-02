@@ -1,0 +1,18 @@
+{% #card %}
+    <p class="font-bold text-xl">Summary</p>
+    <p class="italic text-sm">Next game: {{show.name}}</p>
+    <div class="flex flex-row my-2 space-x-4">
+        <div class="flex flex-col justify-center">
+            <i class="fa-solid fa-user"></i>
+            <p>Crew: <span class="{{ show.class_for_crew }}">{{ show.crew }}</span></p>
+        </div>
+        <div class="flex flex-col justify-center">
+            <i class="fa-solid fa-palette"></i>
+            <p>Graphics Created: <span class="text-green-500 font-bold">6</span></p>
+        </div>
+        <div class="flex flex-col justify-center">
+            <i class="fa-solid fa-check-circle"></i>
+            <p>Checklist: <span class="text-red-600">NOT COMPLETE</span></p>
+        </div>
+    </div>
+{% /card %}

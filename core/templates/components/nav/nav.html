@@ -1,0 +1,19 @@
+<nav class="bg-neutral-50 h-20 w-full sm:flex items-center justify-between content-between p-5 hidden">
+    <a href="#" class="align-middle"><span class="font-bold">DRAGONS</span>TV • Hydra</a>
+    <div class="flex space-x-3">
+        {% #nav_link url="/" path=path %}Dashboard{% /nav_link %}
+        {% #nav_link url="/graphics" path=path %}Graphics{% /nav_link %}
+        {% #nav_link url="/shows" path=path %}Shows{% /nav_link %}
+    </div>
+    {% #nav_profile first_name=user.first_name last_name=user.last_name %}{% /nav_profile %}
+</nav>
+
+<!-- Mobile nav -->
+<nav class="bg-neutral-50 h-20 w-full flex items-center justify-between content-between p-5 visible sm:hidden">
+    <a href="#" class="align-middle text-2xl">Hydra</a>
+    <div class="p-4 space-y-2 bg-gray-600 rounded shadow">
+        <span class="block w-8 h-0.5 bg-gray-100"></span>
+        <span class="block w-8 h-0.5 bg-gray-100"></span>
+        <span class="block w-8 h-0.5 bg-gray-100"></span>
+    </div>    
+</nav>

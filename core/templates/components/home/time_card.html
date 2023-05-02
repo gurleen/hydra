@@ -1,0 +1,30 @@
+{% load tz %}
+{% #card %}
+    <p class="text-sm text-gray-500">The current time is:</p>
+    <p class="text-3xl font-bold" _="
+        init repeat forever
+            js
+                return new Date().toLocaleTimeString() + ' EST'
+            end
+            then put it into my.innerHTML
+            wait 0.5s
+        end
+    ">{% now "g:i:s A" %} EST</p>
+    <p class="text-sm text-gray-500">Time until <span class="italic">{{ show.name }}</span>:</p>
+    <p class="text-3xl font-bold" _="
+        init repeat forever
+            js
+                var rv = ``
+                let timeleft = new Date(`{{ show.start_dt.isoformat }}`) - new Date()
+                var days = Math.floor(timeleft / (1000 * 60 * 60 * 24))
+                var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+                var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60))
+                rv += (days > 0)? `${days} days, ` : ``
+                rv += (hours > 0)? `${hours} hours, ` : ``
+                rv += (minutes > 0)? `${minutes} minutes ` : ``
+                return rv
+            end
+            then put it into my.innerHTML
+            wait 10s
+    ">{{ show.start_dt|timeuntil }}</p>
+{% /card %}

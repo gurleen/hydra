@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Hydra - Shows
+{% endblock title %}
+
+{% block content %}
+    {% #card %}
+    <div class="h-screen">
+        <table class="table-auto border border-collapse border-spacing-10">
+            <thead>
+                <tr class="p-2">
+                    <th class="p-2">Name</th>
+                    <th class="p-2">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for show in show_list %}
+                    <tr>
+                        <td class="p-2">{{ show.name }}</td>
+                        <td class="p-2">{{ show.start_dt }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% /card %}
+{% endblock content %}

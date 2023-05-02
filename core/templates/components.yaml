@@ -1,0 +1,8 @@
+components:
+    nav: "components/nav/nav.html"
+    nav_link: "components/nav/nav_link.html"
+    nav_profile: "components/nav/nav_profile.html"
+    card: "components/card.html"
+    time_card: "components/home/time_card.html"
+    summary: "components/home/summary.html"
+    live_icon: "components/misc/live_icon.html"
