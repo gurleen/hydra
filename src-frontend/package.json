@@ -1,0 +1,39 @@
+{
+  "name": "bun-react-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.tsx",
+    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
+    "start": "NODE_ENV=production bun src/index.tsx",
+    "prepare": "ts-patch install"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^6.3.1",
+    "@logtape/logtape": "^1.1.0",
+    "@logtape/pretty": "^1.1.0",
+    "@microsoft/signalr": "^9.0.6",
+    "@socket.io/bun-engine": "^0.0.2",
+    "bun-plugin-tailwind": "^0.0.15",
+    "emittery": "^1.2.0",
+    "get-yup-fields": "^1.0.0",
+    "motion": "^12.23.14",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-router-dom": "^7.9.1",
+    "socket.io": "^4.8.1",
+    "tailwindcss": "^4.1.13",
+    "typia": "^9.7.2",
+    "webview-bun": "^2.4.0",
+    "yup": "^1.7.1",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "ts-patch": "^3.3.0",
+    "typescript": "~5.9.2"
+  }
+}
